@@ -2,11 +2,12 @@ from collections import defaultdict
 import sys
 input = sys.stdin.readline
 
+
 def findMin():
     result = []
     for idx, val in product.items():
         if cost[start][val[1]] <= val[0]:
-            result.append([val[0] - cost[start][val[1]], idx])
+            result.append([abs(val[0] - cost[start][val[1]]), idx])
 
     if not result:
         return -1
