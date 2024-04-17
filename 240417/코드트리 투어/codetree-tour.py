@@ -30,8 +30,7 @@ if __name__ == "__main__":
         cost[tmp[i * 3 + 1]][tmp[i * 3]] = min(cost[tmp[i * 3 + 1]][tmp[i * 3]], tmp[i * 3 + 2])
 
     for i in range(n):
-        if cost[i][i] == 1e9:
-            cost[i][i] = 0
+        cost[i][i] = 0
 
     for k in range(n):
         for i in range(n):
