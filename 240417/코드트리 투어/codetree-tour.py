@@ -45,6 +45,7 @@ if __name__ == "__main__":
             graph[tmp[i * 3]].append((tmp[i * 3 + 1], tmp[i * 3 + 2]))
             graph[tmp[i * 3 + 1]].append((tmp[i * 3], tmp[i * 3 + 2]))
 
+    dijkstra()
     for i in range(q - 1):
         num, *tmp = list(map(int, input().split()))
         if num == 200:
@@ -55,7 +56,7 @@ if __name__ == "__main__":
             else:
                 product.pop(tmp[0])
         elif num == 400:
-            dijkstra()
             print(findMin())
         elif num == 500:
             start = tmp[0]
+            dijkstra()
