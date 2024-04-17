@@ -48,6 +48,7 @@ if __name__ == "__main__":
         elif num == 300:
             if product[tmp[0]] != list():
                 result.remove([product[tmp[0]][0], tmp[0]])
+                heapq.heapify(result)
                 product.pop(tmp[0])
             else:
                 product.pop(tmp[0])
